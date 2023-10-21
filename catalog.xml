@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/gilberto/Documents/NetBeansProjects/MolasNiqueladas/../../../Desktop/PL_009_V4_00_NT_2018_005_v100/nfe_v4.00.xsd" uri="xml-resources/jaxb/XSD/nfe_v4.00.xsd"/>
+    <system systemId="file:/C:/Users/gilberto/Desktop/PL_009_V4_00_NT_2018_005_v100/leiauteNFe_v4.00.xsd" uri="xml-resources/jaxb/XSD/leiauteNFe_v4.00.xsd"/>
+    <system systemId="file:/C:/Users/gilberto/Desktop/PL_009_V4_00_NT_2018_005_v100/xmldsig-core-schema_v1.01.xsd" uri="xml-resources/jaxb/XSD/xmldsig-core-schema_v1.01.xsd"/>
+    <system systemId="file:/C:/Users/gilberto/Desktop/PL_009_V4_00_NT_2018_005_v100/tiposBasico_v4.00.xsd" uri="xml-resources/jaxb/XSD/tiposBasico_v4.00.xsd"/>
+</catalog>
