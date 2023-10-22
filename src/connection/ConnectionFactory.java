@@ -21,9 +21,9 @@ import javax.swing.JOptionPane;
 public class ConnectionFactory {
     
     private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://177.222.160.87:3306/metalflex";
-    private static final String USER = "matheus";
-    private static final String PASS = "123";
+    private static final String URL = "jdbc:mysql://localhost:3306/metalflex";
+    private static final String USER = "root";
+    private static final String PASS = "root";
     
     public static Connection getConnection(){
     
