@@ -4,6 +4,7 @@
 `docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:5.7`
 
 ### Run tables: 
+
 CREATE DATABASE IF NOT EXISTS metalflex;
 USE metalflex;
 
@@ -68,12 +69,12 @@ CREATE TABLE faturamento (
     vale VARCHAR(255),
     nfe VARCHAR(255),
     situacao VARCHAR(255),
-    cliente INT,
+    ID_cliente INT,
     peso DOUBLE,
     valor DOUBLE,
     data DATE,
     firma VARCHAR(255),
-    FOREIGN KEY (cliente) REFERENCES Cliente(ID_CLIENTE)
+    FOREIGN KEY (ID_cliente) REFERENCES Cliente(ID_CLIENTE)
 );
 
 -- Pedido table
@@ -85,12 +86,12 @@ CREATE TABLE pedido (
     data_entrega VARCHAR(50),
     quantidade INT,
     tipo VARCHAR(50),
-    cliente INT,
+    ID_cliente INT,
     status VARCHAR(50),
     path_desenho VARCHAR(255),
     nome_cliente VARCHAR(255),
     qtde_itens_mes VARCHAR(50),
-    FOREIGN KEY (cliente) REFERENCES Cliente(ID_CLIENTE)
+    FOREIGN KEY (ID_cliente) REFERENCES Cliente(ID_CLIENTE)
 );
 
 -- Qualidade table
@@ -98,7 +99,7 @@ CREATE TABLE qualidade (
     ID_qualidade INT PRIMARY KEY AUTO_INCREMENT,
     `of` int,
     codigo VARCHAR(50),
-    cliente INT,
+    ID_cliente INT,
     qtde INT,
     sobra INT,
     abertura VARCHAR(50),
@@ -111,7 +112,7 @@ CREATE TABLE qualidade (
     espiras VARCHAR(50),
     acabamento VARCHAR(50),
     obs VARCHAR(255),
-    FOREIGN KEY (cliente) REFERENCES Cliente(ID_CLIENTE)
+    FOREIGN KEY (ID_cliente) REFERENCES Cliente(ID_CLIENTE)
 );
 
 -- Relogio table
@@ -126,8 +127,8 @@ CREATE TABLE relogio (
 CREATE TABLE saida (
     ID_saida INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(255),
-    produto INT,
-    FOREIGN KEY (produto) REFERENCES Produto(ID_produto)
+    ID_produto INT,
+    FOREIGN KEY (ID_produto) REFERENCES Produto(ID_produto)
 );
 
 -- Saida_Produto table
@@ -147,6 +148,7 @@ CREATE TABLE usuario (
     senha VARCHAR(50),
     perfil VARCHAR(50)
 );
+
 
 ### Create User
 nome   | senha  | perfil
