@@ -69,12 +69,12 @@ CREATE TABLE faturamento (
     vale VARCHAR(255),
     nfe VARCHAR(255),
     situacao VARCHAR(255),
-    ID_cliente INT,
+    cliente INT,
     peso DOUBLE,
     valor DOUBLE,
     data DATE,
     firma VARCHAR(255),
-    FOREIGN KEY (ID_cliente) REFERENCES Cliente(ID_CLIENTE)
+    FOREIGN KEY (cliente) REFERENCES Cliente(ID_CLIENTE)
 );
 
 -- Pedido table
@@ -120,6 +120,7 @@ CREATE TABLE relogio (
     ID_relogio INT PRIMARY KEY AUTO_INCREMENT,
     inicio INT,
     fim INT,
+    status VARCHAR(50),
     data DATE
 );
 
@@ -148,6 +149,7 @@ CREATE TABLE usuario (
     senha VARCHAR(50),
     perfil VARCHAR(50)
 );
+
 
 
 ### Create User
